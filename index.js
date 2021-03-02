@@ -64,20 +64,13 @@ document.addEventListener("DOMContentLoaded", function() {
         alert('Completed')
         console.log(inforarry)
         createList()
+        delinput()
 
     })
 
     document.getElementById("buttonAdd").addEventListener('click', function() {
         let addPathList = document.getElementById("path_list")
         var form = document.createElement('form')
-
-        //let input = document.createElement('input')
-        //input.setAttribute("type", "text")
-        //input.setAttribute('name', 'path')
-        //input.setAttribute('value', "Add Location")
-        //form.appendChild(input)
-//
-        //addPathList.appendChild(form)
 
 
 
@@ -125,10 +118,11 @@ function createList() {
 
     let ul = document.createElement("ul");
 
+
     inforarry.forEach(function (element,) {
         let li = document.createElement('li');
         //li.classList.add('onePath');
-        li.innerHTML = "Location:  " + element.Path[0] + " Date: " + element.Path[1] + " From " + element.Path[2] + " To " + element.Path[3] + " Situation: " + element.Situation + " (" + element.Symptoms + ")"; 
+        li.innerHTML = element.Path + " Situation: " + element.Situation + " (" + element.Symptoms + ")"; 
         ul.appendChild(li);
     });
 
@@ -136,4 +130,10 @@ function createList() {
     }
 
 
-
+function delinput() {
+    document.getElementById('userName').value = "",
+    document.getElementById('gender').value = "",
+    document.getElementById('birth').value = "",
+    document.getElementById('email').value = "",
+    document.getElementById('firstComment').value = ""
+}
