@@ -7,7 +7,7 @@ let inforObject = function (pName, pGender, pBirth, pEmail, pSituation, pSymptom
     this.ID = Math.random().toString(16).slice(5)
     this.Name = pName;
     this.Gender = pGender;
-    this.Birth = pBirth; 
+    this.Birth = pBirth;
     this.Email = pEmail;
     this.Situation = pSituation;
     this.Symptoms = pSymptoms;
@@ -19,44 +19,44 @@ let inforObject = function (pName, pGender, pBirth, pEmail, pSituation, pSymptom
 
 
 inforarry.push(new inforObject(
-    'Kay', 
-    'Male', 
-    '1994.12.15', 
-    'kay1215@gmail.com', 
-    'General', 
-    'Fever, Cough', 
+    'Kay',
+    'Male',
+    '1994.12.15',
+    'kay1215@gmail.com',
+    'General',
+    'Fever, Cough',
     ["BellevueCollege",
-    "2021. 02. 10",
-    "AM 08:30",
-    "PM 2:30"],
+        "2021. 02. 10",
+        "AM 08:30",
+        "PM 2:30"],
     "I am Kay"))
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
 
     createList()
 
     // HealthCondition -> Submibutton -> Push informaion to inforarry
-    document.getElementById('submitButton').addEventListener("click", function() {
+    document.getElementById('submitButton').addEventListener("click", function () {
 
         let symptoms = [];
-        $("input[name='symptoms']:checked").each(function(e){
+        $("input[name='symptoms']:checked").each(function (e) {
             var value = $(this).val();
-            symptoms.push(value);        
-        })   
+            symptoms.push(value);
+        })
 
 
-        $("input[name='path']").each(function(e){
+        $("input[name='path']").each(function (e) {
             var value = $(this).val()
-            pathlist.push(value);        
+            pathlist.push(value);
         })
 
         inforarry.push(new inforObject(
-            document.getElementById('userName').value, 
-            document.getElementById('gender').value, 
-            document.getElementById('birth').value, 
-            document.getElementById('email').value, 
-            document.getElementById('select-condition').value, 
+            document.getElementById('userName').value,
+            document.getElementById('gender').value,
+            document.getElementById('birth').value,
+            document.getElementById('email').value,
+            document.getElementById('select-condition').value,
             symptoms,
             pathlist,
             document.getElementById('firstComment').value))
@@ -68,14 +68,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     })
 
-    document.getElementById("buttonAdd").addEventListener('click', function() {
+    document.getElementById("buttonAdd").addEventListener('click', function () {
         let addPathList = document.getElementById("path_list")
         var form = document.createElement('form')
         form.className = "js_form"
 
-    
 
-        for(let i = 0; i < 4; i++){
+
+        for (let i = 0; i < 4; i++) {
             if (i == 0) {
                 let input = document.createElement('input')
                 input.setAttribute("type", "text")
@@ -114,11 +114,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     })
 
-    document.getElementById('buttonDel').addEventListener('click', function() {
+    document.getElementById('buttonDel').addEventListener('click', function () {
         //let elements = document.getElementsByClassName('js_form')
         //let path = document.getElementById('path');
         //elements.removeChild(path);
-        for (i=0; i<4; i++){
+        for (i = 0; i < 4; i++) {
             $("#path").remove();
         }
     })
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("oneGender").innerHTML = "Gender: " + inforarry[arrayPointer].Gender;
         document.getElementById("oneEmail").innerHTML = "Email: " + inforarry[arrayPointer].Email;
     });
- 
+
 
 
 
@@ -154,7 +154,7 @@ function createList() {
         let li = document.createElement('li');
         li.classList.add('onePath'); //디테일 떄문에
         li.setAttribute("data-parm", element.ID); // 디테일 떄문에
-        li.innerHTML = "Location:  " + element.Path + " Situation: " + element.Situation + " (" + element.Symptoms + ")"; 
+        li.innerHTML = "Location:  " + element.Path + " Situation: " + element.Situation + " (" + element.Symptoms + ")";
         ul.appendChild(li);
     });
 
@@ -165,24 +165,24 @@ function createList() {
     var liArray = document.getElementsByClassName("onePath");
     Array.from(liArray).forEach(function (element) {
         element.addEventListener('click', function () {
-        // get that data-parm we added for THIS particular li as we loop thru them
-        var parm = this.getAttribute("data-parm");  // passing in the record.Id
-        // get our hidden <p> and write THIS ID value there
-        document.getElementById("IDparmHere").innerHTML = parm;
-        // now jump to our page that will use that one item
-        document.location.href = "index.html#details";
+            // get that data-parm we added for THIS particular li as we loop thru them
+            var parm = this.getAttribute("data-parm");  // passing in the record.Id
+            // get our hidden <p> and write THIS ID value there
+            document.getElementById("IDparmHere").innerHTML = parm;
+            // now jump to our page that will use that one item
+            document.location.href = "index.html#details";
         });
     });
 
-    }
+}
 
 
 function delinput() {
     document.getElementById('userName').value = "",
-    document.getElementById('gender').value = "",
-    document.getElementById('birth').value = "",
-    document.getElementById('email').value = "",
-    document.getElementById('firstComment').value = ""
+        document.getElementById('gender').value = "",
+        document.getElementById('birth').value = "",
+        document.getElementById('email').value = "",
+        document.getElementById('firstComment').value = ""
     $(document).bind("change", "#select-condition", function (event, ui) {
         selectedGenre = $('#select-genre').val();
     });
@@ -196,3 +196,14 @@ function GetArrayPointer(localID) {
         }
     }
 }
+
+
+function shareInfo(whichToAdd) {
+    let ul = document.getElementById("sharedInfo");
+    let li = document.createElement("li");
+    let firstComment = document.createTextNode(document.getElementById(whichToAdd).value);
+    li.append(firstComment);
+    li.append(" ");
+    ul.append(li);
+
+};

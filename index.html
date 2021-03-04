@@ -24,7 +24,7 @@
     <!--   page header -->
     <div data-role="header" data-theme='a'>
       <h1>Status of Bellevue Home (COVID-19)</h1>
-      <div data-role="navbar" data-theme ="b">
+      <div data-role="navbar" data-theme="b">
         <ul>
           <li><a href="#home">Home Page</a></li>
           <li><a href="#Infor">Health Condition</a></li>
@@ -33,40 +33,40 @@
           <li><a href="#Test">Testing in Bellevue</a></li>
         </ul>
       </div>
-    </br>
+      </br>
       <div class="myHeader">Let's keep our community safe</div>
-    </br>
-      <img class ="center" id = 'image1' src="./images/bellevue.png" style="max-width: 100%; height: auto;" class ="center">
+      </br>
+      <img class="center" id='image1' src="./images/bellevue.png" style="max-width: 100%; height: auto;" class="center">
     </div>
 
     <!--   page content -->
     <div data-role="content" data-theme='b'>
       <div class="newFont">
-        <h2> How to prevent from Corona19 </h2>
+        <h2> How to prevent from Coronavirus </h2>
         <p>
-          <ul>
-            <li>Wash your hands often. Use soap and hand sanitizer with water or alcohol.</li>
+        <ul>
+          <li>Wash your hands often. Use soap and hand sanitizer with water or alcohol.</li>
           <li>Keep a safe distance from people who cough or sneeze.</li>
           <li>Wear a mask when it is impossible to keep physical distance.</li>
           <li>Don't touch your eyes, nose, or mouth.</li>
           <li>Use toilet paper or bend your elbow to cover your nose and mouth when coughing or sneezing.</li>
           <li>Take a rest at home if you are not feeling well.</li>
           <li>If you have fever, cough, or difficulty breathing, you should consult a doctor.</li>
-          </ul>
-          
+        </ul>
+
         </p>
 
 
         <h2> Coronavirus Symptoms </h2>
         <p>
           Common symptoms include:
-          <ul>
+        <ul>
           <li>Fever</li>
           <li>A dry cough</li>
           <li>Feeling tired</li>
-          </ul>
-          In rare cases, the following symptoms may occur:
-          <ul>
+        </ul>
+        In rare cases, the following symptoms may occur:
+        <ul>
           <li>Body ache</li>
           <li>Sore throat</li>
           <li>Diarrhea</li>
@@ -74,24 +74,24 @@
           <li>Headache</li>
           <li>Loss of taste or smell</li>
           <li>Skin rash, finger or toe discoloration</li>
-          </ul>
-          Severe symptoms include:
-          <ul>
+        </ul>
+        Severe symptoms include:
+        <ul>
           <li>Difficulty breathing or shortness of breath</li>
           <li>Chest pain or pressure</li>
           <li>Language or motor impairment</li>
-          </ul>
+        </ul>
         </p>
 
       </div>
-      </div>
+    </div>
 
     <!--  page footer -->
     <div data-role="footer" data-theme='b'>
-      <h1>Team Project</h1>
+      <h1>Let's check the pandemic situation in Belleluve -- Team Project</h1>
     </div>
   </div>
-  
+
   <!-- End of  page ------------------------------------------------------------------>
 
 
@@ -105,7 +105,7 @@
     <!--  page header -->
     <div data-role="header" data-theme='a'>
       <h1>Status of Bellevue (COVID-19)</h1>
-      <div data-role="navbar" data-theme ="b">
+      <div data-role="navbar" data-theme="b">
         <ul>
           <li><a href="#home">Home Page</a></li>
           <li><a href="#Infor">Health Condition</a></li>
@@ -130,15 +130,16 @@
       Enter email <br />
       <input type="text" value="" id="email" />
 
-        <div class="ui-field-contain">  <!-- Q. How it works? -->
-          <label for="select-condition">Select Your Situation</label>
-          <select name="select-condition" id='select-condition'>
-            <option value="General">General</option>
-            <option value="Vaccination">Vaccination</option>
-            <option value="Confirmed">Confirmed person</option>
-            <option value="Quarantine">Quarantine</option>
-          </select>
-        </div>
+      <div class="ui-field-contain">
+        <!-- Q. How it works? -->
+        <label for="select-condition">Select Your Situation</label>
+        <select name="select-condition" id='select-condition'>
+          <option value="General">General</option>
+          <option value="Vaccination">Vaccination</option>
+          <option value="Confirmed">Confirmed person</option>
+          <option value="Quarantine">Quarantine</option>
+        </select>
+      </div>
 
 
       Check the following symptoms that you have experienced or experienced in the past 14 days.<br />
@@ -155,12 +156,12 @@
       <input type="checkbox" id="pain" name="symptoms" value="pain">
       <label for="pain"> Abdominal pain or Diarrhea</label>
 
-      <div id = path_list> 
-      Travel Path <br />
-      <input type="text" name = 'path' value="Example: Bellevue College N building " style="color:red">
-      <input type="date" name = 'path'> 
-      <input type='time' name = 'path' >
-      <input type='time' name = 'path'>
+      <div id=path_list>
+        Travel Path <br />
+        <input type="text" name='path' value="Example: Bellevue College N building " style="color:red">
+        <input type="date" name='path'>
+        <input type='time' name='path'>
+        <input type='time' name='path'>
       </div>
 
 
@@ -169,13 +170,13 @@
 
 
       Share any Information (It will be uploaded to the post.)<br />
-    <textarea name="comment" id = "firstComment"rows="10" cols="50">Exapmle
-    I am a 30-year-old woman. I had a fever five days ago, and when I tested the virus, it was confirmed positive. I haven't had a taste for 10 days since I got the virus.
+      <textarea name="comment" id="firstComment" rows="10" cols="50">Example: 
+        I am a 30-year-old woman. I had a fever five days ago, and when I tested the virus, it was confirmed positive. I haven't had a taste for 10 days since I got the virus.
     </textarea>
 
 
 
-      <input type="submit" id = "submitButton" value="submit">
+      <input type="submit" id="submitButton" value="submit" onclick="shareInfo('firstComment')">
 
     </div>
 
@@ -183,19 +184,19 @@
 
     <!--   page footer -->
     <div data-role="footer" data-theme='b'>
-      <h1>Team Project</h1>
+      <h1>Let's check the pandemic situation in Belleluve -- Team Project</h1>
     </div>
   </div>
   <!-- End of  page ------------------------------------------------------------------>
 
-  <!--############################################# --> 
+  <!--############################################# -->
 
   <!-- Start of  page -->
   <div data-role="page" id="details">
     <!--  page header -->
     <div data-role="header" data-theme='a'>
       <h1>Status of Bellevue (COVID-19)</h1>
-      <div data-role="navbar" data-theme ="b">
+      <div data-role="navbar" data-theme="b">
         <ul>
           <li><a href="#home">Home Page</a></li>
           <li><a href="#Infor">Health Condition</a></li>
@@ -205,9 +206,9 @@
         </ul>
 
       </div><!-- /navbar -->
-            <div class="myHeader">Details</div>
+      <div class="myHeader">Details</div>
     </div>
-  
+
     <!--  content -->
     <div data-role="content" data-theme='c'>
       <h3> Your neighbor's information.</h3>
@@ -216,24 +217,24 @@
       <p id="oneGender"></p>
       <p id="oneEmail"></p>
     </div>
-    
-  
+
+
     <!--    footer -->
     <div data-role="footer" data-theme='b'>
-      <h1>Team Project</h1>
+      <h1>Let's check the pandemic situation in Belleluve -- Team Project</h1>
     </div>
-  
+
   </div>
 
-  
-  <!--############################################# --> 
+
+  <!--############################################# -->
 
 
   <div data-role="page" id="Visit">
     <!--   page header -->
     <div data-role="header" data-theme='a'>
       <h1>Status of Bellevue (COVID-19)</h1>
-      <div data-role="navbar" data-theme ="b">
+      <div data-role="navbar" data-theme="b">
         <ul>
           <li><a href="#home">Home Page</a></li>
           <li><a href="#Infor">Health Condition</a></li>
@@ -254,7 +255,7 @@
 
     <!--   page footer -->
     <div data-role="footer" data-theme='b'>
-      <h1>Team Project</h1>
+      <h1>Let's check the pandemic situation in Belleluve -- Team Project</h1>
     </div>
   </div>
   </div>
@@ -273,7 +274,7 @@
     <!--   page header -->
     <div data-role="header" data-theme='a'>
       <h1>Status of Bellevue (COVID-19)</h1>
-      <div data-role="navbar" data-theme ="b">
+      <div data-role="navbar" data-theme="b">
         <ul>
           <li><a href="#home">Home Page</a></li>
           <li><a href="#Infor">Health Condition</a></li>
@@ -287,18 +288,25 @@
     <div data-role="content" data-theme='e'>
       <h1> Share information </h1>
       <div id="InformationList">
-I am a 30-year-old woman. I had a fever five days ago, and when I tested the virus, it was confirmed positive. I haven't had a taste for 10 days since I got the virus.
+        <ul id="sharedInfo">
+          Example:
+          I am a 30-year-old woman. I had a fever five days ago, and when I tested the virus, it was confirmed positive.
+          I haven't had a taste for 10 days since I got the virus.
+        </ul>
       </div>
+
+
       <br />
       Share any Information<br />
-      <textarea name="comment" rows="10" cols="50"></textarea>
-      <input type="button" value="post" id="buttonpost" data-inline="true">
+      <textarea name="comment" rows="10" id="secondComment" cols="50"></textarea>
+      <input type="button" value="post" id="buttonpost" data-inline="true" onclick="shareInfo('secondComment')">
+
     </div>
 
 
     <!--   page footer -->
     <div data-role="footer" data-theme='b'>
-      <h1>Team Project</h1>
+      <h1>Let's check the pandemic situation in Belleluve -- Team Project</h1>
     </div>
   </div>
   </div>
@@ -312,7 +320,7 @@ I am a 30-year-old woman. I had a fever five days ago, and when I tested the vir
     <!--   page header -->
     <div data-role="header" data-theme='a'>
       <h1>Status of Bellevue (COVID-19)</h1>
-      <div data-role="navbar" data-theme ="b">
+      <div data-role="navbar" data-theme="b">
         <ul>
           <li><a href="#home">Home Page</a></li>
           <li><a href="#Infor">Health Condition</a></li>
@@ -336,7 +344,7 @@ I am a 30-year-old woman. I had a fever five days ago, and when I tested the vir
 
     <!--   page footer -->
     <div data-role="footer" data-theme='b'>
-      <h1>Team Project</h1>
+      <h1>Let's check the pandemic situation in Belleluve -- Team Project</h1>
     </div>
   </div>
   </div>
@@ -345,7 +353,8 @@ I am a 30-year-old woman. I had a fever five days ago, and when I tested the vir
 
 
 
-<p id="IDparmHere" hidden>change1</p>  <!--hidden, a place to stash the user ID -->
+  <p id="IDparmHere" hidden>change1</p>
+  <!--hidden, a place to stash the user ID -->
 </body>
 
 </html>
