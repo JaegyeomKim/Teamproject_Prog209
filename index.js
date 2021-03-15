@@ -24,7 +24,7 @@ inforarry.push(new inforObject(
     '1994.12.15',
     'kay1215@gmail.com',
     'General',
-    'Fever, Cough',
+    ' Fever, Cough',
     ["BellevueCollege",
         "2021. 02. 10",
         "AM 08:30",
@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('submitButton').addEventListener("click", function () {
 
         let symptoms = [];
+
         $("input[name='symptoms']:checked").each(function (e) {
             var value = $(this).val();
             symptoms.push(value);
@@ -50,16 +51,20 @@ document.addEventListener("DOMContentLoaded", function () {
             var value = $(this).val()
             pathlist.push(value);
         })
+        if (symptoms.length === 0 && document.getElementById('select-condition').value == 'General') {
 
-        inforarry.push(new inforObject(
-            document.getElementById('userName').value,
-            document.getElementById('gender').value,
-            document.getElementById('birth').value,
-            document.getElementById('email').value,
-            document.getElementById('select-condition').value,
-            symptoms,
-            pathlist,
-            document.getElementById('firstComment').value))
+        }
+        else {
+            inforarry.push(new inforObject(
+                document.getElementById('userName').value,
+                document.getElementById('gender').value,
+                document.getElementById('birth').value,
+                document.getElementById('email').value,
+                document.getElementById('select-condition').value,
+                symptoms,
+                pathlist,
+                document.getElementById('firstComment').value))
+        }
 
         alert('Completed')
         console.log(inforarry)
@@ -205,5 +210,9 @@ function shareInfo(whichToAdd) {
     li.append(firstComment);
     li.append(" ");
     ul.append(li);
-
+    // let p = document.getElementById("sharedInfo");
+    // let firstComment = document.createTextNode(document.getElementById(whichToAdd).value);
+    // p.append(" ");
+    // p.append(firstComment);
+    // p.append(" ");
 };
